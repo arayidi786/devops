@@ -4,7 +4,11 @@ resource "azurerm_resource_group" "resource_group" {
 }
 
 provider "azurerm" {
+<<<<<<< HEAD
   version = "~>2.0.0"
+=======
+  //version = "~>2.0.0"
+>>>>>>> 91a975c (Upgraded to latest version)
   features {}
 }
 
@@ -25,7 +29,7 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
   default_node_pool {
     name            = "agentpool"
     node_count      = var.node_count
-    vm_size         = "Standard_DS1_v2"
+    vm_size         = "standard_b2ms"
   }
 
   service_principal {
